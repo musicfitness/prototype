@@ -1,0 +1,6 @@
+@import "{}/client/stylesheets/globals";
+/**
+ * Material Design Icons (https://materialdesignicons.com)
+ */
+$mdi-font-path: "/packages/fitness_material-design-icons/packages/bower/mdi/fonts";
+@import "{fitness:material-design-icons}/mdi/scss/materialdesignicons";
