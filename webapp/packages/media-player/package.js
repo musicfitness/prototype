@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use('fourseven:scss@3.2.0');
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('tap:i18n@1.5.1');
-  api.use('bixin:meteor-plyr');
+  api.use('zyon:plyr');
 
   addTemplates(api, [
     'media-player'
