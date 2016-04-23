@@ -1,16 +1,16 @@
 /* global WaveSurfer */
 
 const exercises = [{
-  exercise: 'Übung 1: Sit-up',
+  title: 'A1 Sit-up',
   music: '/music/kieser.std.90.cut.mp3'
 }, {
-  exercise: 'Übung 2: Hanging Leg Raise',
+  title: 'B9 Hanging Leg Raise',
   music: '/music/kieser.std.90.cut.mp3'
 }, {
-  exercise: 'Übung 3: Elliptical Machine Minutes',
+  title: 'C3 Elliptical Machine Minutes',
   music: '/music/kieser.std.90.cut.mp3'
 }, {
-  exercise: 'Übung 4: Treadmill Calories',
+  title: 'X1 Treadmill Calories',
   music: '/music/kieser.std.90.cut.mp3'
 }];
 let wavesurfer;
@@ -42,5 +42,26 @@ Template.mediaPlayer.events({
     } else {
       wavesurfer.pause();
     }
+  },
+  'click .js-button-back': function(event, instance) {
+    const max = exercises.length - 1;
+    let exerciseIndex = instance.exerciseIndex.get();
+    exerciseIndex = --exerciseIndex < 0 ? max : exerciseIndex;
+    instance.exerciseIndex.set(exerciseIndex);
+  },
+  'click .js-button-forward': function(event, instance) {
+    const max = exercises.length - 1;
+    let exerciseIndex = instance.exerciseIndex.get();
+    exerciseIndex = ++exerciseIndex > max ? 0 : exerciseIndex;
+    instance.exerciseIndex.set(exerciseIndex);
+  }
+});
+
+Template.mediaPlayer.helpers({
+  exercise: function() {
+    const instance = Template.instance();
+    const exerciseIndex = instance.exerciseIndex.get();
+    const exercise = exercises[exerciseIndex];
+    return exercise;
   }
 });

@@ -1,11 +1,11 @@
 <template name="mediaPlayer">
   <div class="media-player">
     <div class="exercise">
-      Übung 3: Situps
+      {{exercise.title}}
     </div>
     <div class="buttons">
       <div class="button secondary-button backbutton js-back-button">
-        <img src="/images/back.png"/>
+        <img class="js-button-back" src="/images/back.png"/>
       </div>
       <div class="button playbutton js-play-button">
         {{#if instance.playing.get}}
@@ -15,7 +15,7 @@
         {{/if}}
       </div>
       <div class="button secondary-button forwardbutton js-forward-button">
-        <img src="/images/forward.png"/>
+        <img class="js-button-forward" src="/images/forward.png"/>
       </div>
     </div>
     <div class="waveform-container">
