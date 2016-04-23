@@ -58,12 +58,14 @@ Template.mediaPlayer.events({
     let currentExercise = instance.currentExercise.get();
     currentExercise = --currentExercise < 0 ? max : currentExercise;
     instance.currentExercise.set(currentExercise);
+    instance.playing.set(false);
   },
   'click .js-button-forward': function(event, instance) {
     const max = exercises.length - 1;
     let currentExercise = instance.currentExercise.get();
     currentExercise = ++currentExercise > max ? 0 : currentExercise;
     instance.currentExercise.set(currentExercise);
+    instance.playing.set(false);
   }
 });
 
