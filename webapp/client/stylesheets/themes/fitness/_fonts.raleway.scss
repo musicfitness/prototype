@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url(#{$raleway-font-path}/raleway-v9-latin-300.eot);
+  src: local('Raleway Light'), local('Raleway-Light'), url(#{$raleway-font-path}/raleway-v9-latin-300.eot?#iefix) format('embedded-opentype'), url(#{$raleway-font-path}/raleway-v9-latin-300.woff2) format('woff2'), url(#{$raleway-font-path}/raleway-v9-latin-300.woff) format('woff'), url(#{$raleway-font-path}/raleway-v9-latin-300.ttf) format('truetype'), url(#{$raleway-font-path}/raleway-v9-latin-300.svg#Raleway) format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(#{$raleway-font-path}/raleway-v9-latin-regular.eot);
+  src: local('Raleway'), url(#{$raleway-font-path}/raleway-v9-latin-regular.eot?#iefix) format('embedded-opentype'), url(#{$raleway-font-path}/raleway-v9-latin-regular.woff2) format('woff2'), url(#{$raleway-font-path}/raleway-v9-latin-regular.woff) format('woff'), url(#{$raleway-font-path}/raleway-v9-latin-regular.ttf) format('truetype'), url(#{$raleway-font-path}/raleway-v9-latin-regular.svg#Raleway) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(#{$raleway-font-path}/raleway-v9-latin-600.eot);
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(#{$raleway-font-path}/raleway-v9-latin-600.eot?#iefix) format('embedded-opentype'), url(#{$raleway-font-path}/raleway-v9-latin-600.woff2) format('woff2'), url(#{$raleway-font-path}/raleway-v9-latin-600.woff) format('woff'), url(#{$raleway-font-path}/raleway-v9-latin-600.ttf) format('truetype'), url(#{$raleway-font-path}/raleway-v9-latin-600.svg#Raleway) format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(#{$raleway-font-path}/raleway-v9-latin-700.eot);
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(#{$raleway-font-path}/raleway-v9-latin-700.eot?#iefix) format('embedded-opentype'), url(#{$raleway-font-path}/raleway-v9-latin-700.woff2) format('woff2'), url(#{$raleway-font-path}/raleway-v9-latin-700.woff) format('woff'), url(#{$raleway-font-path}/raleway-v9-latin-700.ttf) format('truetype'), url(#{$raleway-font-path}/raleway-v9-latin-700.svg#Raleway) format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

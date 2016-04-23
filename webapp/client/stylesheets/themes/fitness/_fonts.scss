@@ -4,3 +4,9 @@
  */
 $mdi-font-path: "/packages/fitness_material-design-icons/packages/bower/mdi/fonts";
 @import "{fitness:material-design-icons}/mdi/scss/materialdesignicons";
+
+/**
+ * Raleway (Google)
+ */
+$raleway-font-path: "/fonts/raleway";
+@import "fonts.raleway";
