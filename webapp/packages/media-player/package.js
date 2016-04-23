@@ -19,6 +19,8 @@ Package.onUse(function(api) {
   // api.use('bixin:meteor-plyr');
   // api.use('delgermurun:mediaelementjs');
 
+  api.addFiles('vendor/wavesurfer.min.js', 'client');
+
   addTemplates(api, [
     'media-player'
   ]);
