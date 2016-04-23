@@ -4,12 +4,12 @@
 // the entire section is optional.
 
 App.info({
-  id: 'io.bikebuzz.mobileapp',
-  name: 'BikeBuzz',
-  description: 'Report and find stolen bikes',
-  author: 'BikeBuzz Team',
-  email: 'info@bikebuzz.io',
-  website: 'http://bikebuzz.io',
+  id: 'io.sportimusic.mobileapp',
+  name: 'SportiMusic',
+  description: 'Music for your fitness workout',
+  author: 'SportiMusic Team',
+  email: 'info@sportimusic.io',
+  website: 'http://sportimusic.io',
   version: '0.1'
 });
 
