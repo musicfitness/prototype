@@ -19,6 +19,7 @@ Package.onUse(function(api) {
   api.use('fitness:media-player');
 
   addTemplates(api, [
+    'fragments/brand',
     'home'
   ]);
 
