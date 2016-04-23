@@ -3,3 +3,5 @@ Template.settings.events({
     FlowRouter.go('plan');
   }
 });
+Template.settings.onRendered(  () => {$('.dropdown-toggle').dropdown()}
+);

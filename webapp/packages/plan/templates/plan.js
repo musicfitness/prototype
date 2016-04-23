@@ -3,3 +3,8 @@ Template.plan.events({
     FlowRouter.go('plan2');
   }
 });
+Template.plan.events({
+  'click .js-button-settings': () => {
+    FlowRouter.go('settings');
+  }
+});
