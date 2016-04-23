@@ -1,8 +1,8 @@
 @import "{}/client/stylesheets/globals";
 
 body {
-  color: $black-color;
-  background-color: $white-color;
+  color: $white-color;
+  background-color: rgb(57,57,57);
   font-weight: 400;
 }
 // fix for breadcrumb sass compilation
