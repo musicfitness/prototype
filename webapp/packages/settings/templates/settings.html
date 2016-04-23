@@ -3,29 +3,53 @@
     <div class="container">
       <div class="training-plan">
         <div>
-          Music Genre
-          <div class="button secondary-button forwardbutton js-rock-button">
-            <img src="/images/guitar-electric.png" />
+          <div class="selectors">
+            <div class="caption">
+              Musikstil
+            </div>
+            <div class="selector selector-genre js-rock-button">
+              {{#if $eq instance.genre.get 'rock'}}
+                <img src="/images/guitar-electric.png"/>
+              {{else}}
+                <img src="/images/guitar-electric.disabled.png"/>
+              {{/if}}
+              <span>Rock</span>
+            </div>
+            <div class="selector selector-genre js-classic-button">
+              {{#if $eq instance.genre.get 'classic'}}
+                <img src="/images/violin.png"/>
+              {{else}}
+                <img src="/images/violin.disabled.png"/>
+              {{/if}}
+              <span>Classic</span>
+            </div>
+            <div class="selector selector-genre js-jazz-button">
+              {{#if $eq instance.genre.get 'jazz'}}
+                <img src="/images/saxophone.png"/>
+              {{else}}
+                <img src="/images/saxophone.disabled.png"/>
+              {{/if}}
+              <span>Jazz</span>
+            </div>
           </div>
-          Rock
-          <div class="button secondary-button forwardbutton js-rock-button">
-            <img src="/images/guitar-electric.png" />
+          <div class="selectors">
+            <div class="caption">
+              Bewegungsart
+            </div>
+            <div class="selector selector-fitness js-studio-button {{#if $eq instance.fitness.get 'studio'}}active{{/if}}">
+              <i class="mdi mdi-dumbbell"></i>
+              <span>Fitnessstudio</span>
+            </div>
+            <div class="selector selector-fitness js-biking-button {{#if $eq instance.fitness.get 'biking'}}active{{/if}}">
+              <i class="mdi mdi-bike"></i>
+              <span>Radfahren</span>
+            </div>
+            <div class="selector selector-fitness js-running-button {{#if $eq instance.fitness.get 'running'}}active{{/if}}">
+              <i class="mdi mdi-run"></i>
+              <span>Laufen</span>
+            </div>
           </div>
-          Rock
-          <div class="button secondary-button forwardbutton js-rock-button">
-            <img src="/images/guitar-electric.png" />
-          </div>
-          Rock
-          <button type="button" class="btn btn-default js-button-Classic">Classic</button>
-          <button type="button" class="btn btn-default js-button-Rock">Rock</button>
-          <button type="button" class="btn btn-default js-button-Hardrock">Hard Rock</button>
-          Bewegungsart
-          <button type="button" class="btn btn-default js-button-FItnessstudio">Fitnessstudio</button>
-          <button type="button" class="btn btn-default js-button-Fahrad">Fahrad fahren</button>
-          <button type="button" class="btn btn-default js-button-Laufen">Laufen</button>
-          <p>
-            <button type="button" class="btn btn-default js-button-planmenu">Erstelle deinen Musiksportplan</button>
-          </p>
+          <button type="button" class="btn btn-default js-button-planmenu">Erstelle Deinen Musiksportplan</button>
         </div>
       </div>
     </div>

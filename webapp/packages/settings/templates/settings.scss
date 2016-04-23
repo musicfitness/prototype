@@ -1,1 +1,37 @@
 @import "{}/client/stylesheets/globals";
+
+.training-plan {
+  .selectors {
+    .caption {
+      font-size: 20px;
+    }
+
+    .selector {
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      width: 85px;
+      height: 85px;
+      font-size: 12px;
+
+      i {
+        font-size: 54px;
+        margin-bottom: 8px;
+      }
+
+      &.active i {
+        color: $brand-primary;
+      }
+
+      img {
+        height: 52px;
+        margin-bottom: 8px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

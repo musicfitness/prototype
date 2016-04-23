@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'fitness:settings',
+  name: 'fitness:scanner',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: 'Homepage',
+  summary: 'QR-Code Scanner',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
@@ -15,14 +15,11 @@ Package.onUse(function(api) {
   api.use(['templating', 'ecmascript']);
   api.use('fourseven:scss@3.2.0');
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
-  api.use('raix:handlebar-helpers@0.2.5');
-  api.use('tap:i18n@1.5.1');
+  addTemplates(api, []);
+});
 
-  addTemplates(api, [
-    'settings'
-  ]);
-
-  api.addFiles('routes/settings.js');
+Cordova.depends({
+  'phonegap-plugin-barcodescanner': '4.1.0'
 });
 
 function addTemplates(api, templates) {
