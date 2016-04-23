@@ -1,12 +1,44 @@
 .media-player {
   text-align: center;
 
-  .playbutton {
-    margin-bottom: 30px;
-    cursor: pointer;
+  .exercise {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
 
-    img {
-      width: 100px;
+  .buttons {
+    display: table;
+    width: 100%;
+
+    .button {
+      display: table-cell;
+    }
+
+    .secondary-button {
+      img {
+        width: 25px;
+      }
+
+    }
+
+    .backbutton {
+      text-align: left;
+      padding-left: 15px;
+    }
+
+    .playbutton {
+      margin-bottom: 30px;
+      cursor: pointer;
+
+      img {
+        width: 100px;
+      }
+    }
+
+    .forwardbutton {
+      text-align: right;
+      padding-right: 15px;
     }
   }
+
 }
