@@ -1,6 +1,9 @@
 @import "{}/client/stylesheets/globals";
 
 .brand {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   font-size: 24px;
   font-style: italic;
 
