@@ -14,7 +14,5 @@ Template.mediaPlayer.onRendered(() => {
 Template.mediaPlayer.events({
   'click .js-play-button': () => {
     wavesurfer.play();
-    // console.log('playing');
-    // $('.js-player')[0].play();
   }
 });
