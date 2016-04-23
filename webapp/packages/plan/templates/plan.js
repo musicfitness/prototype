@@ -6,5 +6,8 @@ Template.plan.events({
 Template.plan.events({
   'click .js-button-settings': () => {
     FlowRouter.go('settings');
+  },
+  'click .js-button-back': () => {
+    history.back();
   }
 });

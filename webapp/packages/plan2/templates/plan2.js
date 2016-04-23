@@ -4,7 +4,10 @@ Template.plan2.events({
   }
 });
 Template.plan2.events({
-'click .js-button-plan': () => {
-  FlowRouter.go('plan');
-}
+  'click .js-button-plan': () => {
+    FlowRouter.go('plan');
+  },
+  'click .js-button-back': () => {
+    history.back();
+  }
 });
