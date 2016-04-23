@@ -1,0 +1,12 @@
+@import "{}/client/stylesheets/globals";
+
+.brand {
+  font-size: 24px;
+  font-style: italic;
+
+  span {
+    font-weight: 800;
+  }
+  text-align: center;
+  margin-bottom: 30px;
+}
