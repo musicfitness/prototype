@@ -13,18 +13,28 @@ const exercises = [{
   title: 'X1 Treadmill Calories',
   music: '/music/kieser.std.90.cut.mp3'
 }];
+
 let wavesurfer;
+let lastExercise = 0;
 
 Template.mediaPlayer.onCreated(function() {
   const instance = this;
   instance.playing = new ReactiveVar(false);
-  instance.exerciseIndex = new ReactiveVar(0);
+  instance.currentExercise = new ReactiveVar(0);
+  instance.autorun(function() {
+    const currentExercise = instance.currentExercise.get();
+    if (currentExercise !== lastExercise) {
+      const exercise = exercises[currentExercise];
+      wavesurfer.load(exercise.music);
+      lastExercise = currentExercise;
+    }
+  });
 });
 
 Template.mediaPlayer.onRendered(function() {
   const instance = this;
-  const exerciseIndex = instance.exerciseIndex.get();
-  const exercise = exercises[exerciseIndex];
+  const currentExercise = instance.currentExercise.get();
+  const exercise = exercises[currentExercise];
   wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: 'white',
@@ -45,23 +55,23 @@ Template.mediaPlayer.events({
   },
   'click .js-button-back': function(event, instance) {
     const max = exercises.length - 1;
-    let exerciseIndex = instance.exerciseIndex.get();
-    exerciseIndex = --exerciseIndex < 0 ? max : exerciseIndex;
-    instance.exerciseIndex.set(exerciseIndex);
+    let currentExercise = instance.currentExercise.get();
+    currentExercise = --currentExercise < 0 ? max : currentExercise;
+    instance.currentExercise.set(currentExercise);
   },
   'click .js-button-forward': function(event, instance) {
     const max = exercises.length - 1;
-    let exerciseIndex = instance.exerciseIndex.get();
-    exerciseIndex = ++exerciseIndex > max ? 0 : exerciseIndex;
-    instance.exerciseIndex.set(exerciseIndex);
+    let currentExercise = instance.currentExercise.get();
+    currentExercise = ++currentExercise > max ? 0 : currentExercise;
+    instance.currentExercise.set(currentExercise);
   }
 });
 
 Template.mediaPlayer.helpers({
   exercise: function() {
     const instance = Template.instance();
-    const exerciseIndex = instance.exerciseIndex.get();
-    const exercise = exercises[exerciseIndex];
+    const currentExercise = instance.currentExercise.get();
+    const exercise = exercises[currentExercise];
     return exercise;
   }
 });
