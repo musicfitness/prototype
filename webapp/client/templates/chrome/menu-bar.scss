@@ -10,9 +10,12 @@
     background-color: transparent;
     color: white;
 
+    &:focus,
     &:hover {
       background-color: transparent;
       color: white;
+      border: none;
+      outline: none;
     }
 
     i {
