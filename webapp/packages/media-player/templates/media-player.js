@@ -1,19 +1,36 @@
 /* global WaveSurfer */
 
+const exercises = [{
+  exercise: 'Übung 1: Sit-up',
+  music: '/music/kieser.std.90.cut.mp3'
+}, {
+  exercise: 'Übung 2: Hanging Leg Raise',
+  music: '/music/kieser.std.90.cut.mp3'
+}, {
+  exercise: 'Übung 3: Elliptical Machine Minutes',
+  music: '/music/kieser.std.90.cut.mp3'
+}, {
+  exercise: 'Übung 4: Treadmill Calories',
+  music: '/music/kieser.std.90.cut.mp3'
+}];
 let wavesurfer;
 
 Template.mediaPlayer.onCreated(function() {
   const instance = this;
   instance.playing = new ReactiveVar(false);
+  instance.exerciseIndex = new ReactiveVar(0);
 });
 
 Template.mediaPlayer.onRendered(function() {
+  const instance = this;
+  const exerciseIndex = instance.exerciseIndex.get();
+  const exercise = exercises[exerciseIndex];
   wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: 'white',
     progressColor: '#00E78D'
   });
-  wavesurfer.load('/music/kieser.std.90.cut.mp3');
+  wavesurfer.load(exercise.music);
 });
 
 Template.mediaPlayer.events({
