@@ -8,7 +8,7 @@ Template.mediaPlayer.onRendered(() => {
     waveColor: 'white',
     progressColor: '#00E78D'
   });
-  wavesurfer.load('/music/kieser.std.90.mp3');
+  wavesurfer.load('/music/kieser.std.90.cut.mp3');
 });
 
 Template.mediaPlayer.events({

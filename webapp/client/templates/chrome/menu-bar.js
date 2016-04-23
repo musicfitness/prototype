@@ -7,9 +7,8 @@ Template.menubar.events({
   'click .js-button-plan': function(event, instance) {
     const edit = !instance.editPlan.get();
     instance.editPlan.set(edit);
-    console.log(edit);
     if (edit) {
-      FlowRouter.go('plan');
+      FlowRouter.go('settings');
     } else {
       FlowRouter.go('/');
     }
