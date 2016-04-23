@@ -15,6 +15,7 @@ babel-compiler@5.8.24_1
 babel-runtime@0.1.4
 base64@1.0.4
 binary-heap@1.0.4
+bixin:meteor-plyr@0.0.4
 blaze@2.1.3
 blaze-html-templates@1.0.1
 blaze-tools@1.0.4
@@ -43,6 +44,7 @@ fastclick@1.0.7
 fitness:app-main@0.0.1
 fitness:home@0.0.1
 fitness:material-design-icons@0.0.1
+fitness:media-player@0.0.1
 fitness:sass-material-colors@0.0.1
 flemay:less-autoprefixer@1.2.0
 fortawesome:fontawesome@4.5.0

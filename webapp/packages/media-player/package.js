@@ -1,8 +1,8 @@
 Package.describe({
-  name: 'fitness:home',
+  name: 'fitness:media-player',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: 'Homepage',
+  summary: 'Media Player',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
@@ -16,13 +16,12 @@ Package.onUse(function(api) {
   api.use('fourseven:scss@3.2.0');
   api.use(['kadira:flow-router@2.6.0', 'kadira:blaze-layout@2.1.0']);
   api.use('tap:i18n@1.5.1');
-  api.use('fitness:media-player');
+  api.use('bixin:meteor-plyr');
 
   addTemplates(api, [
-    'home'
+    'media-player'
   ]);
 
-  api.addFiles('routes/home.js');
 });
 
 function addTemplates(api, templates) {
