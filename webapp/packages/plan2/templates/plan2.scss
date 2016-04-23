@@ -3,7 +3,23 @@
 .training-plan {
   text-align: center;
 
+  .plan2 {
+    button {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
   button {
     font-size: 18px;
+
+    i {
+      position: absolute;
+      right: 5px;
+      top: 9px;
+      font-size: 18px;
+      font-weight: bold;
+      color: $brand-primary;
+    }
   }
 }
