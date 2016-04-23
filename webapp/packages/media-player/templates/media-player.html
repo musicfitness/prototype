@@ -8,7 +8,11 @@
         <img src="/images/back.png"/>
       </div>
       <div class="button playbutton js-play-button">
-        <img src="/images/StartButton.png"/>
+        {{#if instance.playing.get}}
+          <img src="/images/PauseButton.png"/>
+        {{else}}
+          <img src="/images/StartButton.png"/>
+        {{/if}}
       </div>
       <div class="button secondary-button forwardbutton js-forward-button">
         <img src="/images/forward.png"/>
