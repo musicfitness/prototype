@@ -2,16 +2,16 @@
 
 const exercises = [{
   title: 'A1 Sit-up',
-  music: '/music/kieser.std.90.cut.mp3'
+  music: '/music/SportiMusicDreamPop.low.mp3'
 }, {
   title: 'B9 Hanging Leg Raise',
-  music: '/music/kieser.std.90.cut.mp3'
+  music: '/music/SportiMusicRock.low.mp3'
 }, {
   title: 'C3 Elliptical Machine Minutes',
   music: '/music/kieser.std.90.cut.mp3'
 }, {
   title: 'X1 Treadmill Calories',
-  music: '/music/kieser.std.90.cut.mp3'
+  music: '/music/SportiMusicRock.low.mp3'
 }];
 
 let wavesurfer;
