@@ -8,8 +8,8 @@ App.info({
   name: 'SportiMusic',
   description: 'Music for your fitness workout',
   author: 'SportiMusic Team',
-  email: 'info@sportimusic.io',
-  website: 'http://sportimusic.io',
+  email: 'info@sportimusic.co',
+  website: 'http://sportimusic.co',
   version: '0.1'
 });
 

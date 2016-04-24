@@ -51,7 +51,6 @@ kadira:flow-router
 mquandalle:bower
 peppelg:bootstrap-3-modal
 raix:handlebar-helpers
-raix:push
 reywood:bootstrap3-sass
 reywood:publish-composite
 seba:minifiers-autoprefixer
@@ -70,4 +69,4 @@ fitness:plan
 fitness:plan2
 fitness:plan3
 fitness:settings
-fitness:scanner
+crosswalk
